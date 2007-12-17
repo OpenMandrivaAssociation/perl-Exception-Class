@@ -17,7 +17,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-Class-Data-Inheritable
 BuildRequires:  perl-Devel-StackTrace
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 This module allows you to declare hierarchies of exception classes for use
