@@ -9,11 +9,10 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	GPL or Artistic
 Group: 		Development/Perl
-Source: 	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version}.tar.bz2
 Url: 		http://search.cpan.org/dist/%{module}/
-Requires: 	perl perl-Class-Data-Inheritable >= 0.02
+Source: 	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version}.tar.bz2
+Requires: 	perl-Class-Data-Inheritable >= 0.02
 Requires:	perl-Devel-StackTrace >= 0.9
-BuildRequires:	perl-devel
 BuildRequires:	perl-Class-Data-Inheritable
 BuildRequires:  perl-Devel-StackTrace
 BuildArch: 	noarch
@@ -26,7 +25,7 @@ default base class for all other exceptions.
 
 %prep
 %setup -q -n %{module}-%{version}
-chmod 644 Changes LICENSE README lib/Exception/Class.pm
+chmod 644 Changes LICENSE lib/Exception/Class.pm
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,7 +43,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes LICENSE README
+%doc Changes LICENSE
 %{perl_vendorlib}/Exception
 %{_mandir}/*/*
-
