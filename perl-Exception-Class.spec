@@ -1,6 +1,6 @@
 %define	module	Exception-Class
 %define	name	perl-%{module}
-%define	version	1.25
+%define	version	1.26
 %define	release	%mkrel 1
 
 Summary: 	A module that allows you to declare real exception classes in Perl
@@ -13,8 +13,8 @@ Url: 		http://search.cpan.org/dist/%{module}/
 Source: 	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version}.tar.bz2
 Requires: 	perl-Class-Data-Inheritable >= 0.02
 Requires:	perl-Devel-StackTrace >= 0.9
-BuildRequires:	perl-Class-Data-Inheritable
-BuildRequires:  perl-Devel-StackTrace
+BuildRequires:	perl(Class::Data::Inheritable)
+BuildRequires:  perl(Devel::StackTrace) >= 1.20
 BuildArch: 	noarch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
