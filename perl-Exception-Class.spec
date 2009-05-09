@@ -1,6 +1,6 @@
 %define	module	Exception-Class
 %define	name	perl-%{module}
-%define	version	1.28
+%define	version	1.29
 %define	release	%mkrel 1
 
 Summary: 	A module that allows you to declare real exception classes in Perl
