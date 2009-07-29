@@ -1,22 +1,22 @@
-%define	module	Exception-Class
-%define	name	perl-%{module}
-%define	version	1.29
-%define	release	%mkrel 1
+%define	upstream_name	 Exception-Class
+%define	upstream_version 1.29
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary: 	A module that allows you to declare real exception classes in Perl
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Url: 		http://search.cpan.org/dist/%{module}/
-Source: 	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version}.tar.bz2
-Requires: 	perl-Class-Data-Inheritable >= 0.02
-Requires:	perl-Devel-StackTrace >= 0.9
+Url: 		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Class::Data::Inheritable)
 BuildRequires:  perl(Devel::StackTrace) >= 1.20
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
+Requires: 	perl-Class-Data-Inheritable >= 0.02
+Requires:	perl-Devel-StackTrace >= 0.9
 
 %description
 This module allows you to declare hierarchies of exception classes for use
@@ -24,7 +24,7 @@ in your code. It also provides a simple exception class that it uses as the
 default base class for all other exceptions.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 Changes LICENSE lib/Exception/Class.pm
 
 %build
