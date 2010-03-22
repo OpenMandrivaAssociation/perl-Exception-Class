@@ -1,5 +1,5 @@
 %define	upstream_name	 Exception-Class
-%define	upstream_version 1.29
+%define upstream_version 1.30
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary: 	A module that allows you to declare real exception classes in Perl
 License: 	GPL+ or Artistic
 Group: 		Development/Perl
 Url: 		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Class::Data::Inheritable)
 BuildRequires:  perl(Devel::StackTrace) >= 1.20
@@ -32,7 +32,7 @@ chmod 644 Changes LICENSE lib/Exception/Class.pm
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}
