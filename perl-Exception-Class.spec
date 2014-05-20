@@ -1,14 +1,15 @@
 %define	modname	Exception-Class
-%define modver 1.37
+%define modver 1.38
 
 Summary:	A module that allows you to declare real exception classes in Perl
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/Exception-Class-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Class::Data::Inheritable)
 BuildRequires:	perl(Devel::StackTrace) >= 1.20
@@ -39,5 +40,6 @@ chmod 644 Changes LICENSE lib/Exception/Class.pm
 %doc Changes LICENSE
 %{perl_vendorlib}/Exception
 %{_mandir}/man3/*
+
 
 
