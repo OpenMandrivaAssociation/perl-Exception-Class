@@ -16,6 +16,8 @@ BuildRequires:	perl(Devel::StackTrace) >= 1.20
 BuildRequires:	perl-devel
 Requires:	perl-Class-Data-Inheritable >= 0.02
 Requires:	perl-Devel-StackTrace >= 0.9
+# For tests
+BuildRequires:	perl(Test::More)
 
 %description
 This module allows you to declare hierarchies of exception classes for use
