@@ -11,10 +11,10 @@ Url:		https://metacpan.org/pod/Exception::Class
 Source0:	https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Class::Data::Inheritable)
-BuildRequires:	perl(Devel::StackTrace) >= 1.20
+BuildRequires:	perl(Devel::StackTrace)
 BuildRequires:	perl-devel
-Requires:	perl-Class-Data-Inheritable >= 0.02
-Requires:	perl-Devel-StackTrace >= 0.9
+Requires:	perl-Class-Data-Inheritable
+Requires:	perl-Devel-StackTrace
 # For tests
 BuildRequires:	perl(Test::More)
 
