@@ -3,7 +3,7 @@
 Summary:	A module that allows you to declare real exception classes in Perl
 
 Name:		perl-%{modname}
-Version:	1.44
+Version:	1.45
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
