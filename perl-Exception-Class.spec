@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/Exception::Class
 Source0:	https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Class::Data::Inheritable)
 BuildRequires:	perl(Devel::StackTrace)
 BuildRequires:	perl-devel
